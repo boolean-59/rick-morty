@@ -1,15 +1,20 @@
 <template>
   <header class="container">
-        <h1 class="text-center my-5">{{ message }}</h1>
+        <h1 class="text-center my-5">{{ apptitle }}</h1>
+        <search-component />
     </header>
 </template>
 
 <script>
+ import SearchComponent from "./SearchComponent.vue"
 
 export default {
   name: 'HeaderComponent',
   props: {
-    message: String
+    apptitle: String
+  },
+  components:{
+    SearchComponent
   }
 }
 </script>
